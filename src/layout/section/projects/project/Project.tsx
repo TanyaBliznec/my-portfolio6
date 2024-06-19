@@ -17,17 +17,33 @@ export const Project = (props: ProjectPropsType) => {
             <Title>{props.title}</Title>
             <Text>{props.text}</Text>
             <UsedStack><b>Tech stack :</b>{props.stack}</UsedStack>
-            <Icon iconId={"link"} width={"20px"} height={"20px"}/>
-            <Link href={"#"}>Live Preview</Link>
-            <Icon iconId={"github"} width={"20px"} height={"20px"}/>
-            <Link href={"#"}>View Code</Link>
+            <ProjectCodeList>
+                <ProjectLink>
+                    <Icon iconId={"link"} width={"20px"} height={"20px"} viewBox="0 0 20px 20px" />
+                    <Link href={"#"}>Live Preview</Link>
+                </ProjectLink>
+
+                <ProjectLink>
+                    <Icon iconId={"github"} width={"20px"} height={"20px"} />
+                    <Link href={"#"}>View Code</Link>
+                </ProjectLink>
+
+            </ProjectCodeList>
+
+
+
         </StyledProject>
     );
 };
 
 const StyledProject = styled.div`
-min-width: 350px;
-width: 33%;
+width: 375px;
+padding: 5px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
 `
 
 const Image = styled.img`
@@ -50,5 +66,16 @@ const Text = styled.p`
 `
 
 const UsedStack = styled.p`
+
+`
+
+const ProjectCodeList = styled.ul`
+display: flex;
+justify-content: space-around;
+list-style-type: none;
+padding: 0%;
+`
+
+const ProjectLink = styled.li`
 
 `

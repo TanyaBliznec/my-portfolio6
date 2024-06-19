@@ -3,19 +3,18 @@ import { Icon } from "../../components/icon/Icon";
 import { Menu } from "../../components/menu/Menu";
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { LinkSocial } from "../../components/linkSocial/LinkSocial";
 
 const menuItems = ["Home", "About", "Technologies", "Projects", "Contact"]
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+            <FlexWrapper  wrap={"wrap"} justify={"space-between"}>
                 <Icon iconId={"logo1"} />
                 <Number>+91 12345 09876</Number>
                 <Mail>info@example.com</Mail>
-                <Icon iconId={"git-icon"} />
-                <Icon iconId={"twitter"} />
-                <Icon iconId={"linkedin"} />
+                <LinkSocial/>
             </FlexWrapper>
             <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                 <Menu menuItems={menuItems} />
@@ -25,7 +24,7 @@ export const Footer = () => {
     );
 }
 
-const StyledFooter = styled.section`
+const StyledFooter = styled.footer`
 background-color: #ee8699;
 min-height: 30vh;
 `
