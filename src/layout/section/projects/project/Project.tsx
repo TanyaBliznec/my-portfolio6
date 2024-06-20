@@ -37,8 +37,8 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-width: 375px;
-padding: 5px;
+max-width: 375px;
+padding: 35px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -71,7 +71,7 @@ const UsedStack = styled.p`
 
 const ProjectCodeList = styled.ul`
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
 list-style-type: none;
 padding: 0%;
 `

@@ -15,11 +15,15 @@ export const Education = (props: ExperiencePropsType) => {
     return (
         <StyledEducation>
             <Speciality>{props.specialityTitle}</Speciality>
-            <FlexWrapper >
-                <Icon iconId={"building"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
-                <PlaceOfStudy>{props.place}</PlaceOfStudy>
-                <Icon iconId={"calendar"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
-                <StudyPeriod>{props.period}</StudyPeriod>
+            <FlexWrapper justify={"space-between"} >
+                <Wrap>
+                    <Icon iconId={"building"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
+                    <PlaceOfStudy>{props.place}</PlaceOfStudy>
+                </Wrap>
+                <Wrap>
+                    <Icon iconId={"calendar"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
+                    <StudyPeriod>{props.period}</StudyPeriod>
+                </Wrap>
             </FlexWrapper>
         </StyledEducation>
     );
@@ -33,3 +37,5 @@ const PlaceOfStudy = styled.span``
 
 
 const StudyPeriod = styled.span``
+
+const Wrap = styled.span``

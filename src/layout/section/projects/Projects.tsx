@@ -16,7 +16,7 @@ export const Projects = () => {
         <StyledProjects>
             <SectionTitle>Projects</SectionTitle>
             <SectionText>Things I’ve built so far</SectionText>
-            <FlexWrapper wrap={"wrap"}>
+            <FlexWrapper wrap={"wrap"} justify={"center"}>
                 <Project title={"Project Tile goes here"}
                     text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                     src={proj1Img}
