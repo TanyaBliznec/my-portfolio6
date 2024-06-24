@@ -74,6 +74,7 @@ display: flex;
 justify-content: space-between;
 list-style-type: none;
 padding: 0%;
+width: 100%;
 `
 
 const ProjectLink = styled.li`

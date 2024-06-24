@@ -11,7 +11,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <FlexWrapper  wrap={"wrap"} justify={"space-between"}>
-                <Icon iconId={"logo1"} />
+                <Icon iconId={"logo1"} width={"95px"} height={"60"} viewBox={"0 0 95 60"} />
                 <Number>+91 12345 09876</Number>
                 <Mail>info@example.com</Mail>
                 <LinkSocial/>
