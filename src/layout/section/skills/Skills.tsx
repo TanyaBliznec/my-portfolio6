@@ -47,7 +47,6 @@ export const Skills = () => {
 
 
 const StyledSkills = styled.section`
-background-color: #acf931;
 min-height: 100vh;
 
 ${FlexWrapper} {

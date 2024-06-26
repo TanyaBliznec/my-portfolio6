@@ -20,8 +20,7 @@ export const Info = () => {
 }
 
 
-const StyledInfo = styled.div`
-background-color: #c1e5f4;
+const StyledInfo = styled.section`
 min-height: 30vh;
 `
 

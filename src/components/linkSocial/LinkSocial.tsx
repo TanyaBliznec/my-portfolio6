@@ -37,7 +37,7 @@ export const LinkSocial = () => {
 const StyledLinkSocial = styled.div`
 display: flex;
 justify-content: left;
-padding-left: 60px;
+
 `
 
 const SociaLList = styled.ul`

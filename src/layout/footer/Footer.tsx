@@ -4,6 +4,8 @@ import { Menu } from "../../components/menu/Menu";
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { LinkSocial } from "../../components/linkSocial/LinkSocial";
+import { theme } from "../../styles/Theme";
+
 
 const menuItems = ["Home", "About", "Technologies", "Projects", "Contact"]
 
@@ -17,7 +19,7 @@ export const Footer = () => {
                 <LinkSocial/>
             </FlexWrapper>
             <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-                <Menu menuItems={menuItems} />
+                <Menu menuItems={menuItems} color={"#42446e"} />
                 <Text>Designed and built by Pavan MG with Love & Coffee</Text>
             </FlexWrapper>
         </StyledFooter>

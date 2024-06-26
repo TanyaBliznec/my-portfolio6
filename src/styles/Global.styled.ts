@@ -17,6 +17,8 @@ font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
+
+color: ${theme.colors.fontTx};
 }
 
 a{
