@@ -5,6 +5,7 @@ import { Menu } from "../../components/menu/Menu";
 import { LinkSocial } from "../../components/linkSocial/LinkSocial";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { theme } from "../../styles/Theme";
 
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
@@ -14,10 +15,10 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justify="space-evenly" align="center">
+                <FlexWrapper justify="space-between"  align="center">
                     <Logo />
                     <Menu menuItems={items}  />
-                    <LinkSocial />
+                    <LinkSocial fill={`${theme.colors.fontTx}`}/>
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -25,7 +26,7 @@ export const Header = () => {
 }
 
 const StyledHeader = styled.header`
-background-color: #e3eef0;
+
 display: flex;
 padding: 20px 0 ;
 position: fixed;

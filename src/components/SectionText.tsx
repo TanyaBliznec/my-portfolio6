@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const SectionText = styled.p`
-color: #2e2c2c;
+font-size: 32px;
+line-height: 81%;
 text-align: center;
+margin: 0 0 115px;
 `

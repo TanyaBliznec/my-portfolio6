@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { FlexWrapper } from "../FlexWrapper";
+import { theme } from "../../styles/Theme";
 
 type ExperiencePropsType = {
     gobTitle: string
@@ -36,8 +37,27 @@ export const Experience = (props: ExperiencePropsType) => {
 };
 
 const StyledExperience = styled.div`
+height: 75px;
+max-width: 705px;
+margin: 35px 0;
+position: relative;
+&::before{
+content: "";
+display: inline-block;
+width: 100%;
+height: 2px ;
+background: #ebeaed;
+
+position: absolute;
+top: 75px;
+}
 `
-const GobTitle = styled.h3``
+const GobTitle = styled.h3`
+font-weight: 400;
+font-size: 20px;
+line-height: 140%;
+letter-spacing: 0.05em;
+`
 
 const WorkPlace = styled.span``
 
@@ -48,4 +68,11 @@ const Location = styled.span``
 
 const WorkPeriod = styled.span``
 
-const Wrap = styled.span``
+const Wrap = styled.span`
+font-weight: 500;
+font-size: 12px;
+line-height: 233%;
+letter-spacing: 0.08em;
+color: #a7a7a7;
+
+`

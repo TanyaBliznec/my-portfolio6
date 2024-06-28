@@ -19,6 +19,20 @@ font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
 -moz-osx-font-smoothing: grayscale;
 
 color: ${theme.colors.fontTx};
+
+}
+h2{
+font-weight: 700;
+font-size: 42px;
+line-height: 124%;
+letter-spacing: -0.01em;
+color: ${theme.colors.fontTl};
+}
+
+p{
+font-weight: 400;
+font-size: 18px;
+line-height: 144%;
 }
 
 a{
@@ -30,6 +44,7 @@ ul{
 }
 
 section{
+    margin: 200px 0;
     background-color: ${theme.colors.primaryBg};
 }
 
