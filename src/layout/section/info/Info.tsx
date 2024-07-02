@@ -13,11 +13,11 @@ export const Info = () => {
                     <InfoTitle>About Me</InfoTitle>
                     <Description>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</Description>
                     <InfoTitle>Work Experience</InfoTitle>
-                    <Experience gobTitle={"Junior Web Developer"} place={"Dr. Rajkumar’s Learning App"} location={"Bengaluru"} period={"Sep 2021 - Dec 2021"} />
-                    <Experience gobTitle={"Web Development Intern"} place={"IonPixelz Web Solutions"} location={"Bengaluru"} period={"Sep 2021 - Dec 2021"} />
-                    <Experience gobTitle={"SEO / SEM Specialist"} place={"HAAPS"} location={"Bengaluru"} period={"Sep 2021 - Dec 2021"} />
+                    <Experience gobTitle={"Junior Web Developer"} place={"Dr. Rajkumar’s Learning App"} location={"Bengaluru"} period={"Sep 2021 - Dec 2021"} smallText={"Full Time"} />
+                    <Experience gobTitle={"Web Development Intern"} place={"IonPixelz Web Solutions"} location={"Bengaluru"} period={"Sep 2021 - Dec 2021"} smallText={"Internship"} />
+                    <Experience gobTitle={"SEO / SEM Specialist"} place={"HAAPS"} location={"Bengaluru"} period={"Sep 2021 - Dec 2021"} smallText={"Internship"} />
                     <InfoTitle>Education</InfoTitle>
-                    <Education specialityTitle={"Bachelor in Electronics & Communication"} place={"Bangalore Instutute of Technology"} period={"Aug 2015 - Dec 2020"} />
+                    <Education specialityTitle={"Bachelor in Electronics & Communication"} place={"Bangalore Instutute of Technology"} period={"Aug 2015 - Dec 2020"} smallText={"Full Time"} />
                 </Wrap>
             </Container>
         </StyledInfo>

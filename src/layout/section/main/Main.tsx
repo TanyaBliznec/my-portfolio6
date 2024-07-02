@@ -12,7 +12,7 @@ export const Main = () => {
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
                     <div>
-                        <SmallText>Hi 👋,<br />My name is <br />
+                        <SmallText>Hi <TextImg>👋</TextImg>,<br />My name is <br />
                             <NameText>Pavan MG </NameText>
                         </SmallText>
                         <MainTitle>A  Web Developer</MainTitle>
@@ -52,7 +52,7 @@ font-size: 58px;
 line-height: 121%;
 letter-spacing: -0.02em;
 
-text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 `
 
 const SmallText = styled.h2`
@@ -62,8 +62,20 @@ font-size: 58px;
 line-height: 121%;
 letter-spacing: -0.02em;
 
-text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 `
+
+const TextImg = styled.span`
+display: inline-block;
+transition: 0.2s;
+&:hover{
+    transform: scale(1.5) rotate(45deg);
+}
+`
+
+
+
+
 const NameText = styled.h2`
 font-weight: 700;
 font-size: 58px;
@@ -73,5 +85,5 @@ background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 `

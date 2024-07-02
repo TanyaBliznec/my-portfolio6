@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 
 type LinkSocialPropsType = {
-    fill?: string
+    color?: string
 }
 
 
@@ -13,21 +13,21 @@ export const LinkSocial = (props: LinkSocialPropsType) => {
         <StyledLinkSocial >
             <SociaLList>
                 <SocialItem>
-                    <SociaLLink>
-                        <Icon width={"30px"} height={"30px"} viewBox={"0 0 30px 30px"} iconId={"git-icon"} fill={props.fill} />
+                    <SociaLLink color={props.color}>
+                        <Icon width={"30px"} height={"30px"} viewBox={"0 0 30px 30px"} iconId={"git-icon"} />
                     </SociaLLink>
                 </SocialItem>
                 <SociaLList>
                     <SocialItem>
-                        <SociaLLink>
-                            <Icon width={"31px"} height={"31px"} viewBox={"0 0 31px 31px"} iconId={"twitter"} fill={props.fill} />
+                        <SociaLLink color={props.color}>
+                            <Icon width={"31px"} height={"31px"} viewBox={"0 0 31px 31px"} iconId={"twitter"} />
                         </SociaLLink>
                     </SocialItem>
                 </SociaLList>
                 <SociaLList>
                     <SocialItem>
-                        <SociaLLink >
-                            <Icon width={"30px"} height={"30px"} viewBox={"0 0 30px 30px"} iconId={"linkedin"} fill={props.fill} />
+                        <SociaLLink color={props.color}>
+                            <Icon width={"30px"} height={"30px"} viewBox={"0 0 30px 30px"} iconId={"linkedin"} />
                         </SociaLLink>
                     </SocialItem>
                 </SociaLList>
@@ -38,9 +38,6 @@ export const LinkSocial = (props: LinkSocialPropsType) => {
 };
 
 const StyledLinkSocial = styled.div`
-&:hover{
-    cursor: pointer;
-}
 `
 
 
@@ -53,9 +50,15 @@ list-style-type: none;
 `
 
 const SocialItem = styled.li`
-
 `
 
-const SociaLLink = styled.a`
+export const SociaLLink = styled.a`
+display: flex;
+color:${props => props.color};
 
+&:hover{
+    color: ${theme.colors.fontTl};
+    filter: drop-shadow(0px 0px 20px #3B3E82) ;
+    transform: scale(1.5);
+} 
 `

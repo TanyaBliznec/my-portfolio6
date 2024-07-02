@@ -26,7 +26,7 @@ export const Project = (props: ProjectPropsType) => {
                     </ProjectLink>
 
                     <ProjectLink>
-                        <Icon iconId={"github"} width={"20px"} height={"20px"} fill={"#000000"} />
+                        <Icon iconId={"github"} width={"20px"} height={"20px"} />
                         <Link href={"#"}>View Code</Link>
                     </ProjectLink>
                 </ProjectLinkList>
@@ -102,4 +102,7 @@ line-height: 162%;
 text-decoration: underline;
 text-decoration-skip-ink: none;
 color: #000;
+display: flex;
+gap: 10px;
+align-items: center;
 `

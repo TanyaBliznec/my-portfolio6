@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { FlexWrapper } from "../FlexWrapper";
+import { SmallText } from "../experience/Experience";
 
 type ExperiencePropsType = {
     specialityTitle: string
     place: string
     period: string
+    smallText: string
 
 }
 
@@ -14,7 +16,12 @@ type ExperiencePropsType = {
 export const Education = (props: ExperiencePropsType) => {
     return (
         <StyledEducation>
-            <Speciality>{props.specialityTitle}</Speciality>
+            <SpecialityWrap>
+                <Speciality>{props.specialityTitle}</Speciality>
+                <SmallText>{props.smallText}</SmallText>
+            </SpecialityWrap>
+
+
             <FlexWrapper justify={"space-between"} >
                 <Wrap>
                     <Icon iconId={"building"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
@@ -40,12 +47,19 @@ content: "";
 display: inline-block;
 width: 100%;
 height: 2px ;
-background: #ebeaed;
+background-color: #ebeaed;
 
 position: absolute;
 top: 75px;
 }
 `
+
+const SpecialityWrap = styled.div`
+width: 100%;
+display: flex;
+justify-content: space-between;
+`
+
 const Speciality = styled.h3`
 font-weight: 400;
 font-size: 20px;

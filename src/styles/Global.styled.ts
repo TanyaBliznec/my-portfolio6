@@ -37,6 +37,7 @@ line-height: 144%;
 
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 ul{

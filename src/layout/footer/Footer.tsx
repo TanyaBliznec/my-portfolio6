@@ -21,11 +21,11 @@ export const Footer = () => {
                     <WrapContact>
                         <Number>+91 12345 09876</Number>
                         <Mail>info@example.com</Mail>
-                        <LinkSocial fill={"#42446e"} />
+                        <LinkSocial  color={`${theme.colors.fontTl}`}/>
                     </WrapContact>
                 </Wrap>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-                    <Menu menuItems={menuItems} color={"#42446e"} weight="400" size="18px" height="144%" />
+                    <Menu menuItems={menuItems} color={`${theme.colors.fontTl}`} weight="400" size="18px" height="144%" />
                     <Text>Designed and built by <span>Pavan MG</span> with <span>Love</span> & <span>Coffee</span></Text>
                 </FlexWrapper>
 
@@ -50,7 +50,7 @@ const Wrap = styled.div`
         display: inline-block;
         width: 100%;
         height: 2px;
-        background-color: #666666;
+        background-color: ${theme.colors.fontTx};
         opacity: 0.3;
 
         position: absolute;
