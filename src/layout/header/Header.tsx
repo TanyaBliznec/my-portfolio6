@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { HeaderMenu } from "./headerMenu/HeaderMenu";
+import { LinkSocialHeader } from "./linkSocialHeader/linkSocialHeader";
 import { theme } from "../../styles/Theme";
-import { LinkSocial } from "../../components/linkSocial/LinkSocial";
+import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
@@ -17,8 +18,9 @@ export const Header = () => {
             <Container>
                 <FlexWrapper justify="space-between"  align="center">
                     <Logo />
-                    <Menu menuItems={items}  />
-                    <LinkSocial color={`${theme.colors.fontTx}`}/>
+                    <HeaderMenu menuItems={items}/>
+                    <MobileMenu menuItems={items}/>
+                    <LinkSocialHeader/>
                 </FlexWrapper>
             </Container>
         </StyledHeader>

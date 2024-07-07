@@ -9,6 +9,7 @@ type StyledMenuPropsType = {
     weight?: string
     size?: string
     height?: string
+    
 }
 
 
@@ -17,6 +18,7 @@ export const Menu = (props: {
     weight?: string ;
     size?: string ;
     height?: string ;
+
 
     menuItems: Array<string>
 }) => {
@@ -52,13 +54,13 @@ position: relative;
 z-index: 0;
 &:hover{
     transform: scale(1.2);
-
+    
     &::before{
     content: "";
     display: inline-block;
     height: 1.5px;
     width:100%;
-    background-color:${theme.colors.fontTl};
+    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
     position: absolute;
     bottom: 5px;
     z-index: -1;
@@ -74,10 +76,14 @@ font-size: ${props => props.size || "20px"};
 line-height: ${props => props.height || "130%"};
 text-align: center;
 color: ${props => props.color || `${theme.colors.fontTx}`};
+
 &:hover{
-    color:${theme.colors.fontTl};
-    font-weight: bold;
-   }
+background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+ font-weight: bold;
+}
 `
 
 

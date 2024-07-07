@@ -1,44 +1,46 @@
 import React from "react";
-import { Icon } from "../icon/Icon";
+
 import styled from "styled-components";
-import { theme } from "../../styles/Theme";
-
-type LinkSocialPropsType = {
-    color?: string
-    hoverColor?: string
-}
+import { Icon } from "../../../components/icon/Icon";
+import { theme } from "../../../styles/Theme";
 
 
-export const LinkSocial = (props: LinkSocialPropsType) => {
+
+
+export const LinkSocialHeader = () => {
     return (
-        <StyledLinkSocial >
+        <StyledLinkSocialHeader >
             <SociaLList>
                 <SocialItem>
-                    <SociaLLink color={props.color} hoverColor={props.hoverColor} >
+                    <SociaLLink>
                         <Icon width={"30px"} height={"30px"} viewBox={"0 0 30px 30px"} iconId={"git-icon"} />
                     </SociaLLink>
                 </SocialItem>
                 <SociaLList>
                     <SocialItem>
-                        <SociaLLink color={props.color} hoverColor={props.hoverColor}>
+                        <SociaLLink>
                             <Icon width={"31px"} height={"31px"} viewBox={"0 0 31px 31px"} iconId={"twitter"} />
                         </SociaLLink>
                     </SocialItem>
                 </SociaLList>
                 <SociaLList>
                     <SocialItem>
-                        <SociaLLink color={props.color} hoverColor={props.hoverColor}>
+                        <SociaLLink>
                             <Icon width={"30px"} height={"30px"} viewBox={"0 0 30px 30px"} iconId={"linkedin"} />
                         </SociaLLink>
                     </SocialItem>
                 </SociaLList>
             </SociaLList>
-        </StyledLinkSocial>
+        </StyledLinkSocialHeader>
     );
 
 };
 
-const StyledLinkSocial = styled.div`
+const StyledLinkSocialHeader = styled.div`
+@media  ${theme.media.tablet}{
+    position: relative;
+    right: 100px;
+}
 `
 
 
@@ -54,17 +56,16 @@ const SocialItem = styled.li`
 
 `
 
-export const SociaLLink = styled.a<LinkSocialPropsType>`
+export const SociaLLink = styled.a`
 display: flex;
-color:${props => props.color};
+color: ${theme.colors.fontTx};
 
 position: relative;
 z-index: 0;
 
 &:hover{
-    color:${props => props.hoverColor};
-    /* filter: drop-shadow(0px 0px 10px ${theme.colors.fontTx}) ; */
     transform: scale(1.2);
+
     &::before{
         content: "";
         display: inline-block;

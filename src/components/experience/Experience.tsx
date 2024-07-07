@@ -53,6 +53,11 @@ background-color: #ebeaed;
 
 position: absolute;
 top: 75px;
+
+${FlexWrapper}{
+    display: flex;
+    flex-grow: 1;
+}
 }
 
 `

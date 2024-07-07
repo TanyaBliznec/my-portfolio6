@@ -21,7 +21,7 @@ export const Footer = () => {
                     <WrapContact>
                         <Number>+91 12345 09876</Number>
                         <Mail>info@example.com</Mail>
-                        <LinkSocial  color={`${theme.colors.fontTl}`}/>
+                        <LinkSocial color={`${theme.colors.fontTl}`}/>
                     </WrapContact>
                 </Wrap>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
