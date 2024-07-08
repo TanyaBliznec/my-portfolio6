@@ -38,8 +38,8 @@ export const LinkSocialHeader = () => {
 
 const StyledLinkSocialHeader = styled.div`
 @media  ${theme.media.tablet}{
-    position: relative;
-    right: 100px;
+    position: absolute;
+    right: 250px;
 }
 `
 

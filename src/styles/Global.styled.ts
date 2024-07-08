@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./Theme";
+import { font } from "./Common";
 
 export const GlobalStyle = createGlobalStyle`
 *,
@@ -21,9 +22,11 @@ font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
 color: ${theme.colors.fontTx};
 
 }
+
+
 h2{
+    ${font({Fmax: 42, Fmin: 30})}
 font-weight: 700;
-font-size: 42px;
 line-height: 124%;
 letter-spacing: -0.01em;
 color: ${theme.colors.fontTl};
@@ -45,8 +48,11 @@ ul{
 }
 
 section{
-    margin: 200px 0;
+    margin: 100px 0;
     background-color: ${theme.colors.primaryBg};
+    @media ${theme.media.mobile} {
+        margin: 80px 0;
+    }
 }
 
 `

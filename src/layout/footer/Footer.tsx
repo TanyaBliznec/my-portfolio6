@@ -7,7 +7,7 @@ import { LinkSocial } from "../../components/linkSocial/LinkSocial";
 
 import { Container } from "../../components/Container";
 import { theme } from "../../styles/Theme";
-import { Menu } from "../../components/menu/Menu";
+import { FooterMenu } from "./footerMenu/FooterMenu";
 
 
 const menuItems = ["Home", "About", "Technologies", "Projects", "Contact"]
@@ -25,7 +25,7 @@ export const Footer = () => {
                     </WrapContact>
                 </Wrap>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-                    <Menu menuItems={menuItems} color={`${theme.colors.fontTl}`} weight="400" size="18px" height="144%" />
+                    <FooterMenu menuItems={menuItems} />
                     <Text>Designed and built by <span>Pavan MG</span> with <span>Love</span> & <span>Coffee</span></Text>
                 </FlexWrapper>
 

@@ -4,13 +4,14 @@ import photo from '../../../assets/image/Photo/photo1.png'
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"}>
+                <FlexWrapper align={"center"} justify={"space-between"} wrap="wrap">
                     <div>
                         <SmallText>Hi <TextImg>👋</TextImg>,<br />My name is <br />
                             <NameText>Pavan MG </NameText>
@@ -27,7 +28,14 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
+
 display: flex;
+color: #a1e0ef;
+@media ${theme.media.tablet}{
+        ${FlexWrapper}{
+        justify-content: center;
+    }
+}
 `
 
 
@@ -43,27 +51,34 @@ linear-gradient(#E70FAA, #00C0FD) border-box;
 
 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
+@media ${theme.media.tablet}{
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    margin-top: 30px;
+    }
+
 `
 
 const MainTitle = styled.h1`
+${font({weight: 700, Fmax: 58, Fmin: 36})}
 color: ${theme.colors.fontTl};
-font-weight: 700;
-font-size: 58px;
-line-height: 121%;
+line-height: 1.3;
 letter-spacing: -0.02em;
 
 text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
 `
 
 const SmallText = styled.h2`
+${font({weight: 700, Fmax: 58, Fmin: 36})}
 color: ${theme.colors.fontTl};
-font-weight: 700;
-font-size: 58px;
-line-height: 121%;
+line-height: 1.3;
 letter-spacing: -0.02em;
 
 text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 `
+// ${font({color: theme.colors.fontTl, Fmax: 58, Fmin: 36})}
 
 const TextImg = styled.span`
 display: inline-block;
@@ -73,12 +88,8 @@ transition: 0.2s;
 }
 `
 
-
-
-
 const NameText = styled.h2`
-font-weight: 700;
-font-size: 58px;
+${font({weight: 700, Fmax: 58, Fmin: 36})}
 line-height: 121%;
 letter-spacing: -0.02em;
 background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);

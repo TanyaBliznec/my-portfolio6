@@ -1,24 +1,9 @@
 import styled from "styled-components"
 import { theme } from "../../../styles/Theme"
 
-// type StyledMenuPropsType = {
-// color?: string
-// weight?: string
-// size?: string
-// height?: string
-
-// }
 
 
-export const HeaderMenu = (props: {
-    // color?: string ;
-    // weight?: string ;
-    // size?: string ;
-    // height?: string ;
-
-
-    menuItems: Array<string>
-}) => {
+export const HeaderMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledHeaderMenu>
             <ul>

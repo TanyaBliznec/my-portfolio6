@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { FlexWrapper } from "../FlexWrapper";
 import { theme } from "../../styles/Theme";
+import { font } from "../../styles/Common";
 
 type ExperiencePropsType = {
     gobTitle: string
@@ -21,12 +22,12 @@ export const Experience = (props: ExperiencePropsType) => {
                 <GobTitle>{props.gobTitle}</GobTitle>
                 <SmallText>{props.smallText}</SmallText>
             </GobWrap>
-            <FlexWrapper justify="space-between" >
+            <FlexWrapper justify="space-between" wrap="wrap">
                 <Wrap>
                     <Icon iconId={"building"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
                     <WorkPlace>{props.place}</WorkPlace>
                 </Wrap>
-                <Wrap className="point">
+                <Wrap>
                     <Icon iconId={"location"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
                     <Location>{props.location}</Location>
                 </Wrap>
@@ -53,29 +54,36 @@ background-color: #ebeaed;
 
 position: absolute;
 top: 75px;
-
-${FlexWrapper}{
-    display: flex;
-    flex-grow: 1;
-}
+@media ${theme.media.tablet} {
+    top: 60px; 
 }
 
+}
+
+@media ${theme.media.tablet}{
+    margin: 20px 0;
+    height: 100%;
+    ${FlexWrapper}{
+        flex-grow: 1;
+    }
+}
 `
 
 const GobWrap = styled.div`
 width: 100%;
 display: flex;
 justify-content: space-between;
+padding: 2px;
 `
 const GobTitle = styled.h3`
+${font({Fmax:20, Fmin: 17})}
 font-weight: 400;
-font-size: 20px;
 line-height: 140%;
 letter-spacing: 0.05em;
 `
 const WorkPlace = styled.span``
 
-export const SmallText = styled.span`
+ const SmallText = styled.span`
 font-weight: 600;
 font-size: 9px;
 line-height: 289%;
@@ -115,11 +123,14 @@ const Location = styled.span``
 
 const WorkPeriod = styled.span``
 
-const Wrap = styled.span`
+const Wrap = styled.div`
 font-weight: 500;
 font-size: 12px;
-line-height: 233%;
+line-height: 1.2;
 letter-spacing: 0.08em;
 color: #a7a7a7;
-
+@media ${theme.media.tablet} {
+    font-weight: 400;
+    font-size: 9px;
+}
 `

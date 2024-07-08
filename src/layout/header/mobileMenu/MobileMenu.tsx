@@ -53,6 +53,7 @@ ul{
     display: flex;
     gap: 30px;
     flex-direction: column;
+    align-items: center;
     
 }
 `
@@ -124,18 +125,7 @@ position: relative;
 z-index: 0;
 &:hover{
     transform: scale(1.2);
-    
-    &::before{
-    content: "";
-    display: inline-block;
-    height: 1.5px;
-    width:100%;
-    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
-    position: absolute;
-    bottom: 5px;
-    z-index: -1;
-}
-}
+    }
 `
 
 const Link = styled.a`
@@ -146,11 +136,24 @@ line-height: 130%;
 text-align: center;
 color:${theme.colors.fontTx};
 
+
 &:hover{
 background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 font-weight: bold;
+
+
+&::before{
+    content: "";
+    display: inline-block;
+    height: 1.5px;
+    width:100%;
+    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+    position: absolute;
+    bottom: 5px;
+    z-index: -1;
+}
 }
 `

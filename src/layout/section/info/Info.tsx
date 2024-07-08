@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Experience } from "../../../components/experience/Experience";
 import { Education } from "../../../components/education/Education";
 import { Container } from "../../../components/Container";
+import { font } from "../../../styles/Common";
+import { theme } from "../../../styles/Theme";
 
 
 export const Info = () => {
@@ -27,7 +29,8 @@ export const Info = () => {
 
 const StyledInfo = styled.section`
 display: flex;
-justify-content: start
+justify-content: start;
+
 `
 
 const Wrap = styled.div`
@@ -36,8 +39,12 @@ max-width: 710px;
 
 
 const InfoTitle = styled.h2`
+
 `
 
 const Description = styled.p`
 padding: 35px 0;
+@media ${theme.media.tablet} {
+    padding: 20px 0;
+}
 `
