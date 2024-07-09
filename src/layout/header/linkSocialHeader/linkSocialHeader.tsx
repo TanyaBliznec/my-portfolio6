@@ -37,9 +37,10 @@ export const LinkSocialHeader = () => {
 };
 
 const StyledLinkSocialHeader = styled.div`
+margin-right: 15px;
 @media  ${theme.media.tablet}{
-    position: absolute;
-    right: 250px;
+position: absolute;
+right: 100px;
 }
 `
 

@@ -28,10 +28,13 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-
 display: flex;
-color: #a1e0ef;
+margin-top: 235px;
+
+
 @media ${theme.media.tablet}{
+    margin-top: 100px;
+    text-align: center;
         ${FlexWrapper}{
         justify-content: center;
     }

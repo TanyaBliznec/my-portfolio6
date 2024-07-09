@@ -6,6 +6,7 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { LinkSocialHeader } from "./linkSocialHeader/linkSocialHeader";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
+import { theme } from "../../styles/Theme";
 
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
@@ -18,7 +19,7 @@ export const Header = () => {
                 <FlexWrapper justify="space-between"  align="center">
                     <Logo />
                     <HeaderMenu menuItems={items}/>
-                    {/* <MobileMenu menuItems={items}/> */}
+                    {/* <MobileMenu menuItems={items}/>  */}
                     <LinkSocialHeader/>
                 </FlexWrapper>
             </Container>
@@ -28,10 +29,11 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
 display: flex;
-padding: 20px 0 ;
-position: fixed;
-left: 0;
-top: 0;
-right: 0;
-z-index: 99999;
+margin-top: 35px;
+
+/* position: fixed; */
+/* left: 0; */
+/* top: 0; */
+/* right: 0; */
+/* z-index: 99999; */
 `

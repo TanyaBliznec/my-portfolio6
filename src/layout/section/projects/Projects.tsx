@@ -18,7 +18,7 @@ export const Projects = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
-                <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-around"}>
                     <Project title={"Project Tile goes here"}
                         text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                         src={proj1Img}
@@ -56,5 +56,8 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-
+margin-bottom: 120px;
+${FlexWrapper}{
+    gap: 34px;
+}
 `

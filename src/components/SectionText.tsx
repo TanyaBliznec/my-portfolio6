@@ -3,12 +3,11 @@ import { font } from "../styles/Common";
 import { theme } from "../styles/Theme";
 
 export const SectionText = styled.p`
-${font({Fmax: 35, Fmin: 20})}
-font-size: 32px;
-line-height: 81%;
+${font({Fmax: 32, Fmin: 20})}
+line-height: 1.2;
 text-align: center;
-margin: 0 0 115px;
+margin: 0 0 100px;
 @media ${theme.media.tablet}{
-    margin: 0 0 80px;
+    margin: 0 0 30px;
 }
 `

@@ -1,7 +1,7 @@
 export const theme = {
     colors: {
-        // primaryBg: "#FFFFFF",
-        primaryBg: "#a1e0ef",
+        primaryBg: "#FFFFFF",
+        // primaryBg: "#a1e0ef",
 
         fontTl: "#42446e",
         fontTx: "#666666",
@@ -12,6 +12,7 @@ export const theme = {
     media: {
         tablet: "screen and (max-width: 768px)",
         mobile: "screen and (max-width: 576px)",
+        desktop: "screen and (max-width: 1204px)",
     }
 
 }

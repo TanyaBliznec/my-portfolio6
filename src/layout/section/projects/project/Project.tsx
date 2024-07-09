@@ -39,25 +39,31 @@ export const Project = (props: ProjectPropsType) => {
 
 const StyledProject = styled.div`
 max-width: 375px;
-margin-bottom: 35px;
+width: 100%;
+margin-bottom: 45px;
 border-radius: 20px;
 
 display: flex;
 flex-direction: column;
 align-items: center;
 box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
-background: #fff;
+background-color: #fff;
+
+@media ${theme.media.mobile} {
+    margin-bottom: 20px;
+}
 `
 
 const Image = styled.img`
-width: 375px;
+max-width: 375px;
+width: 100%;
 height: 260px;
 object-fit: cover;
 border-radius: 20px 20px 0 0 ;
 `
 
 const ProjectWrap = styled.div`
-padding: 25px 35px 25px 30px;
+padding: 22px 35px 25px 30px;
 `
 
 const Link = styled.a`

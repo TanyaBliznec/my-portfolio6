@@ -48,10 +48,10 @@ ul{
 }
 
 section{
-    margin: 100px 0;
+    margin: 200px 0;
     background-color: ${theme.colors.primaryBg};
-    @media ${theme.media.mobile} {
-        margin: 80px 0;
+    @media ${theme.media.desktop} {
+        margin: 100px 0;
     }
 }
 
