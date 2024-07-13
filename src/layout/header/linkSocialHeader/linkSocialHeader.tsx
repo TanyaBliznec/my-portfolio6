@@ -7,7 +7,7 @@ import { theme } from "../../../styles/Theme";
 
 
 
-export const LinkSocialHeader = () => {
+export const LinkSocialHeader: React.FC = () => {
     return (
         <StyledLinkSocialHeader >
             <SociaLList>
@@ -38,9 +38,10 @@ export const LinkSocialHeader = () => {
 
 const StyledLinkSocialHeader = styled.div`
 margin-right: -10px;
-@media  ${theme.media.desktop}{
+@media  ${theme.media.tablet}{
 position: absolute;
-right: 120px;
+right: 100px;
+z-index: 9999;
 }
 `
 

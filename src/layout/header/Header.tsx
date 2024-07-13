@@ -2,9 +2,9 @@ import React from "react";
 import { Logo } from "../../components/logo/Logo";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { DesktopMenu } from "./DesktopMenu/DesktopMenu";
+import { DesktopMenu } from "./headerMenu/DesktopMenu/DesktopMenu";
 import { LinkSocialHeader } from "./linkSocialHeader/linkSocialHeader";
-import { MobileMenu } from "./mobileMenu/MobileMenu";
+import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
 
 import { S } from "../header/Header_Styles"
 
@@ -14,7 +14,7 @@ const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 
 export const Header: React.FC = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
-    const breakpoint = 768;
+    const breakpoint = 769;
 
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)

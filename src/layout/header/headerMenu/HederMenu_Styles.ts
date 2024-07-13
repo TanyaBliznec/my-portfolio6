@@ -1,32 +1,48 @@
 import styled, { css } from "styled-components"
 import { theme } from "../../../styles/Theme"
-import { Menu } from "../menu/Menu";
 
 
+//Menu
 
-export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
-    return (
-        <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
-                <span></span>
-            </BurgerButton>
-            
-            <MobileMenuPopup isOpen={false} >
-                <Menu menuItems={props.menuItems} />
-            </MobileMenuPopup>
-        </StyledMobileMenu>
-
-    );
-
-};
-
-const StyledMobileMenu = styled.nav`
-
-    display: none;
-
-    @media ${theme.media.desktop} {
-        display: block;
+const MenuItem = styled.li`
+position: relative;
+z-index: 0;
+&:hover{
+    transform: scale(1.2);
+    
+    &::before{
+    content: "";
+    display: inline-block;
+    height: 1.5px;
+    width:100%;
+    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+    position: absolute;
+    bottom: 5px;
+    z-index: -1;
 }
+}
+`
+
+const Link = styled.a`
+font-family: "DM Sans", sans-serif;
+font-weight: 500;
+font-size: 20px;
+line-height: 130%;
+text-align: center;
+color:${theme.colors.fontTx};
+
+&:hover{
+background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+ font-weight: bold;
+}
+`
+
+// MobileMenu
+
+const MobileMenu = styled.nav`
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -55,11 +71,11 @@ ul{
 
 const BurgerButton = styled.button <{ isOpen: boolean }>`
 position: fixed;
-top: -100px;
+top: -77px;
 right: -100px;
 width: 200px;
 height: 200px;
-z-index: 999999;
+z-index: 9999;
 background-color:${theme.colors.primaryBg};
 border: 0;
 
@@ -115,3 +131,23 @@ ${props => props.isOpen && css<{ isOpen: boolean }>`
 
 `
 
+
+//DesktopMenu
+
+const DesktopMenu = styled.nav`
+
+ul{
+    display: flex;
+    gap: 30px;
+}
+`
+
+export const S = {
+    MenuItem,
+    Link,
+    MobileMenu,
+    MobileMenuPopup,
+    BurgerButton,
+    DesktopMenu
+    
+}

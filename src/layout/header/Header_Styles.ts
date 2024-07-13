@@ -9,12 +9,13 @@ padding: 40px 0 100px;
 @media ${theme.media.tablet} {
     padding: 40px 0 50px; 
 }
-position: fixed;
-left: 0;
-top: 0;
-right: 0;
-z-index: 99999;
-`
+/*  */
+/* position: fixed; */
+/* left: 0; */
+/* top: 0; */
+/* right: 0; */
+/* z-index: 99999; */
+// `
 
 
 export const S = {
