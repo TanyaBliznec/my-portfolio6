@@ -48,6 +48,12 @@ export const Projects = () => {
                         text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                         src={proj6Img}
                         stack={"HTML , JavaScript, SASS, React"} />
+
+
+                    <Project title={"Project Tile goes here"}
+                        text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
+                        src={proj6Img}
+                        stack={"HTML , JavaScript, SASS, React"} />
                 </FlexWrapper>
 
             </Container>
@@ -56,8 +62,9 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-margin-bottom: 120px;
 ${FlexWrapper}{
-    gap: 34px;
+        display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, auto));
+    gap: 15px;
 }
 `

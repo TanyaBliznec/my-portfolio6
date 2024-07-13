@@ -29,12 +29,9 @@ export const Main = () => {
 
 const StyledMain = styled.section`
 display: flex;
-margin-top: 235px;
-
 
 @media ${theme.media.tablet}{
-    margin-top: 100px;
-    text-align: center;
+        text-align: center;
         ${FlexWrapper}{
         justify-content: center;
     }

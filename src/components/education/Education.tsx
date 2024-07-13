@@ -24,12 +24,12 @@ export const Education = (props: ExperiencePropsType) => {
             </SpecialityWrap>
 
 
-            <FlexWrapper justify={"space-between"} >
+            <FlexWrapper justify={"space-between"} wrap="wrap">
                 <Wrap>
                     <Icon iconId={"building"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
                     <PlaceOfStudy>{props.place}</PlaceOfStudy>
                 </Wrap>
-                <Wrap>
+                <Wrap className="two">
                     <Icon iconId={"calendar"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
                     <StudyPeriod>{props.period}</StudyPeriod>
                 </Wrap>
@@ -41,38 +41,33 @@ export const Education = (props: ExperiencePropsType) => {
 const StyledEducation = styled.div`
 height: 75px;
 max-width: 705px;
-margin: 35px 0 0;
 position: relative;
-/* outline: 3px solid black; */
-&::before{
-content: "";
-display: inline-block;
-width: 100%;
-height: 2px ;
-background-color: #ebeaed;
+border-bottom: 2px solid;
 
-position: absolute;
-top: 75px;
-
-@media ${theme.media.tablet} {
-    top: 70px; 
-}
-}
-
-@media ${theme.media.tablet}{
-    margin: 15px 0;
-    height: 100%;
     ${FlexWrapper}{
-        flex-grow: 1;
-    }
+    display: grid;
+    grid-template-columns: 455px  160px;
+    grid-auto-rows: minmax(15px, auto);
+    gap:10px;
+.two{
+justify-self: end;
 }
+@media ${theme.media.tablet}{
+    grid-template-columns:2fr 1fr;
+    
+}
+    }
+
 `
 
 const SpecialityWrap = styled.div`
+max-width: 705px;
 width: 100%;
+
 display: flex;
 justify-content: space-between;
 padding: 2px;
+
 `
 
 const Speciality = styled.h3`
@@ -82,7 +77,7 @@ line-height: 140%;
 letter-spacing: 0.05em;
 `
 
- const SmallText = styled.span`
+const SmallText = styled.span`
 font-weight: 600;
 font-size: 9px;
 line-height: 289%;
@@ -90,6 +85,7 @@ text-align: center;
 color: #018c0f;
 
 display: flex;
+flex: 0 0 84px;
 width: 84px; 
 height: 24px; 
 background-color: #d7ffe0;
@@ -104,14 +100,15 @@ const PlaceOfStudy = styled.span``
 const StudyPeriod = styled.span``
 
 const Wrap = styled.span`
+display: flex;
 font-weight: 500;
 font-size: 12px;
-line-height: 233%;
+line-height: 1.2;
 letter-spacing: 0.08em;
 color: #a7a7a7;
 
 @media ${theme.media.tablet} {
     font-weight: 400;
-    font-size: 9px;
+    font-size: 10px;
 }
 `

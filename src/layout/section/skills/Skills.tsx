@@ -15,42 +15,42 @@ export const Skills = () => {
                 <SectionText> Technologies I’ve been working with recently</SectionText>
                 <SkillIcons>
                     <FlexWrapper justify={"space-around"} wrap={"wrap"}>
-                    <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <IconWrap>
                             <Icon iconId={"html"} width={"120px"} height={"120px"} viewBox={"0 0 120px 120px"} />
-                            </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap>
                             <Icon iconId={"css"} width={"120px"} height={"120px"} viewBox={"0 0 120px 120px"} />
-                        </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap>
                             <Icon iconId={"js"} width={"120px"} height={"120px"} viewBox={"0 0 120px 120px"} />
-                        </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap>
                             <Icon iconId={"react"} width={"113px"} height={"100px"} viewBox={"0 0 113px 100px"} />
-                        </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap >
                             <Icon iconId={"vector"} width={"105px"} height={"100px"} viewBox={"0 0 105px 100px"} />
-                        </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap >
                             <Icon iconId={"bootstrap"} width={"88"} />
-                        </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap >
                             <Icon iconId={"tailwind"} width={"120px"} height={"120px"} viewBox={"0 0 120px 120px"} />
-                        </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap >
                             <Icon iconId={"sass"} width={"117px"} height={"87px"} viewBox={"0 0 117px 87px"} />
-                        </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap >
                             <Icon iconId={"git"} width={"105px"} height={"105px"} viewBox={"0 0 105px 105px"} />
-                        </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap >
                             <Icon iconId={"greensock"} width={"120px"} height={"120px"} viewBox={"0 0 120px 120px"} />
-                        </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap >
                             <Icon iconId={"vscode"} width={"112px"} height={"112px"} viewBox={"0 0 112px 112px"} />
-                        </div>
-                        <div style={{ width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        </IconWrap>
+                        <IconWrap >
                             <Icon iconId={"github"} width="88" />
-                        </div>
+                        </IconWrap>
                     </FlexWrapper>
                 </SkillIcons>
             </Container>
@@ -63,8 +63,15 @@ export const Skills = () => {
 const StyledSkills = styled.section`
 
 ${FlexWrapper} {
-gap: 80px;
-
+display: grid;
+gap: 60px;
+grid-template-columns: repeat(auto-fill, minmax(120px, auto));
+@media ${theme.media.tablet} {
+    gap: 35px;
+}
+@media ${theme.media.mobile} {
+    gap: 20px;
+}
 }
 
 
@@ -73,11 +80,12 @@ gap: 80px;
 const SkillIcons = styled.div`
 max-width: 1191px;
 margin: 0 auto;
-
 `
 
-
-
-
-
-
+const IconWrap = styled.div`
+width: 120px;
+height: 120px;
+display: flex;
+justify-content: center;
+align-items: center;
+`

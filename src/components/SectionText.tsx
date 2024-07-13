@@ -6,8 +6,8 @@ export const SectionText = styled.p`
 ${font({Fmax: 32, Fmin: 20})}
 line-height: 1.2;
 text-align: center;
-margin: 0 0 100px;
+padding: 49px 0 110px;
 @media ${theme.media.tablet}{
-    margin: 0 0 30px;
+    padding: 49px 0 50px;
 }
 `

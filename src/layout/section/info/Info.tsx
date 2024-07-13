@@ -31,6 +31,7 @@ const StyledInfo = styled.section`
 display: flex;
 justify-content: start;
 
+
 `
 
 const Wrap = styled.div`
@@ -39,12 +40,11 @@ max-width: 710px;
 
 
 const InfoTitle = styled.h2`
-
+padding: 38px 0 34px;
 `
 
 const Description = styled.p`
-padding: 35px 0;
 @media ${theme.media.tablet} {
-    padding: 20px 0;
+    /* padding: 20px 0; */
 }
 `

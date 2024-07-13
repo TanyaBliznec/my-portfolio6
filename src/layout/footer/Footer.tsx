@@ -39,10 +39,12 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-padding: 0 0 60px;
+padding: 100px 0 60px;
 display: flex;
 
 ${FlexWrapper}{
+    padding-top: 45px;
+    height: auto;
         gap: 30px;
     @media screen and (max-width: 1006px){
         justify-content: center;
@@ -52,6 +54,7 @@ ${FlexWrapper}{
             flex-direction: column;
             gap: 15px;
             margin-bottom: 20px;
+            padding-top: 0;
         }
     }
 }
@@ -66,31 +69,43 @@ ${Container}{
     }
 
 }
+
+@media ${theme.media.mobile} {
+    padding: 50px 0 60px;
+}
 `
 
 const Wrap = styled.div`
-    margin: 0 0 90px;
+    padding-bottom: 40px;
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
 
-    &::before{
-        content: "";
-        display: inline-block;
-        width: 100%;
-        height: 2px;
-        background-color: ${theme.colors.fontTx};
-        opacity: 0.3;
+    border-bottom: 2px solid green;
 
-        position: absolute;
-        top: 100px; 
+    @media ${theme.media.tablet}{
+        border-bottom: 0;
+        padding-bottom: 85px;
+    }
 
-        @media ${theme.media.tablet} {
-            opacity: 0;
-        }     
-        }
+    /* &::before{ */
+        /* content: ""; */
+        /* display: inline-block; */
+        /* width: 100%; */
+        /* height: 2px; */
+        /* background-color: ${theme.colors.fontTx}; */
+        /* opacity: 0.3; */
+
+        /* position: absolute; */
+        /* top: 100px;  */
+
+        /* @media ${theme.media.tablet} { */
+            /* opacity: 0; */
+        /* }      */
+        /* } */
 `
 
 const IconPosition = styled.div`
@@ -110,6 +125,8 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 flex-wrap: wrap;
+
+
 
 @media ${theme.media.tablet} {
     flex-direction: column;

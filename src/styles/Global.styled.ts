@@ -20,7 +20,7 @@ font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
 -moz-osx-font-smoothing: grayscale;
 
 color: ${theme.colors.fontTx};
-
+min-width: 360px;
 }
 
 
@@ -48,11 +48,12 @@ ul{
 }
 
 section{
-    margin: 200px 0;
-    background-color: ${theme.colors.primaryBg};
+    padding: 100px 0;
+    background-color:${theme.colors.primaryBg};
     @media ${theme.media.desktop} {
-        margin: 100px 0;
+        padding: 50px 0;
     }
 }
+
 
 `

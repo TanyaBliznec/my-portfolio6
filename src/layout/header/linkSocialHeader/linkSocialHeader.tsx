@@ -37,10 +37,10 @@ export const LinkSocialHeader = () => {
 };
 
 const StyledLinkSocialHeader = styled.div`
-margin-right: 15px;
-@media  ${theme.media.tablet}{
+margin-right: -10px;
+@media  ${theme.media.desktop}{
 position: absolute;
-right: 100px;
+right: 120px;
 }
 `
 
