@@ -1,7 +1,6 @@
 import React from "react";
 import { Icon } from "../icon/Icon";
 import styled from "styled-components";
-import { theme } from "../../styles/Theme";
 
 type LinkSocialPropsType = {
     color?: string
@@ -9,7 +8,7 @@ type LinkSocialPropsType = {
 }
 
 
-export const LinkSocial = (props: LinkSocialPropsType) => {
+export const LinkSocial: React.FC<LinkSocialPropsType> = (props: LinkSocialPropsType) => {
     return (
         <StyledLinkSocial >
             <SociaLList>

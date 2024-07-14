@@ -1,9 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { FlexWrapper } from "../FlexWrapper";
-import { theme } from "../../styles/Theme";
-import { font } from "../../styles/Common";
+
+
+import {S} from "./Experience_Styles"
 
 type ExperiencePropsType = {
     gobTitle: string
@@ -15,100 +15,88 @@ type ExperiencePropsType = {
 }
 
 
-export const Experience = (props: ExperiencePropsType) => {
+export const Experience: React.FC<ExperiencePropsType> = (props: ExperiencePropsType) => {
     return (
-        <StyledExperience>
-            <GobWrap>
-                <GobTitle>{props.gobTitle}</GobTitle>
-                <SmallText>{props.smallText}</SmallText>
-            </GobWrap>
+        <S.Experience>
+            <S.GobWrap>
+                <S.GobTitle>{props.gobTitle}</S.GobTitle>
+                <S.SmallText>{props.smallText}</S.SmallText>
+            </S.GobWrap>
             <FlexWrapper justify="space-between" wrap="wrap">
-                <Wrap>
+                <S.Wrap>
                 <Icon iconId={"building"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
-                    <WorkPlace>{props.place}</WorkPlace>
-                </Wrap>
-                <Wrap>
+                    <S.WorkPlace>{props.place}</S.WorkPlace>
+                </S.Wrap>
+                <S.Wrap>
                     <Icon iconId={"location"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
-                    <Location>{props.location}</Location>
-                </Wrap>
-                <Wrap className="three">
+                    <S.Location>{props.location}</S.Location>
+                </S.Wrap>
+                <S.Wrap className="three">
                     <Icon iconId={"calendar"} width={"16"} height={"12"} viewBox={"0 0 16 12"} />
-                    <WorkPeriod>{props.period}</WorkPeriod>
-                </Wrap>
+                    <S.WorkPeriod>{props.period}</S.WorkPeriod>
+                </S.Wrap>
             </FlexWrapper>
-        </StyledExperience>
+        </S.Experience>
     );
 };
 
-const StyledExperience = styled.div`
-height: 75px;
-max-width: 705px;
-position: relative;
-border-bottom: 2px solid;
-
-${FlexWrapper}{
-    display: grid;
-    grid-template-columns: 220px 235px 160px;
-    grid-auto-rows: minmax(15px, auto);
-    gap:10px;
-.three{
-    justify-self: end;
-}
-@media ${theme.media.tablet}{
-    grid-template-columns:repeat(3, 1fr);
-    
-}
-    
-}
-`
-
-const GobWrap = styled.div`
-width: 100%;
-display: flex;
-justify-content: space-between;
-padding: 2px;
-`
-const GobTitle = styled.h3`
-${font({Fmax:20, Fmin: 17})}
-font-weight: 400;
-line-height: 140%;
-letter-spacing: 0.05em;
-`
-const WorkPlace = styled.span``
-
-const SmallText = styled.span`
-font-weight: 600;
-font-size: 9px;
-line-height: 289%;
-text-align: center;
-color: #018c0f;
-
-display: flex;
-width: 84px; 
-height: 24px; 
-background-color: #d7ffe0;
-border-radius: 100px;
-justify-content: center;
-align-items: center;
-
-`
 
 
 
-const Location = styled.span``
 
 
-const WorkPeriod = styled.span``
 
-const Wrap = styled.div`
-display: flex;
-font-weight: 500;
-font-size: 12px;
-line-height: 1.2;
-letter-spacing: 0.08em;
-color: #a7a7a7;
-@media ${theme.media.tablet} {
-    font-weight: 400;
-    font-size: 10px;
-}
-`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,5 @@
 import React from "react";
 import iconsSprite from '../../assets/image/icons-sprite.svg'
-import styled from "styled-components";
-
 
 type IconPropsType = {
     iconId: string
@@ -11,7 +9,7 @@ type IconPropsType = {
     fill?: string
 }
 
-export const Icon = (props:IconPropsType) => {
+export const Icon: React.FC<IconPropsType> = (props:IconPropsType) => {
 return(
 
 <svg width={props.width ||"50" } height={props.height || "87"} viewBox={props.viewBox || "0 0 88 87"} fill={props.fill || "none"} xmlns="http://www.w3.org/2000/svg">
